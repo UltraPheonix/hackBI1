@@ -1,3 +1,4 @@
+from multiprocessing.dummy import Process
 from main import instantMessage as im
 import PySimpleGUI as sg
 import threading
@@ -70,13 +71,13 @@ def loop1():
             im.getCurrentMessage()
 def loop2():
     while True:
-        time.sleep(10)
+        time
+        im.getCurrentMessage()
         imwindow['MessageList'].update(im.logs[im.Channel])
         imwindow['MessageList'].update(im.getMessages())
-        im.getCurrentMessage()
-thread1 = threading.Thread(target=loop1())
-thread1.start()
-thread2 = threading.Thread(target=loop2())
-thread2.start()
+Process(target=loop1()).start()
+Process(target=loop2()).start()
+
+
 
 
